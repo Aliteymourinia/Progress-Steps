@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/Progress Steps/script.js" defer></script>
+    <link rel="stylesheet" href="../main.css" />
+    <title>Progress Steps</title>
+  </head>
+  <body class="h-[100vh] flex flex-col items-center justify-center">
+    <div class="container text-center">
+      <div
+        class="progress-container flex relative mb-7 before:absolute bg-slate-300 left-0 translate-y-[50%] h-1 w-5/6 mx-20 z-[-1]"
+      >
+        <div
+          class="progress bg-blue-500 absolute top-1/2 -translate-y-2/4 left-0 h-1 z-[-1] transition duration-[0.4s,ease]"
+          id="progress"
+        ></div>
+        <div
+          class="circle bg-white text-#999 rounded-[50%] h-7 w-7 -m-3 border-[3px] border-blue-500 transition-[0.4s,ease] flex items-center justify-center fixed left-1"
+        >
+          1
+        </div>
+        <div
+          class="circle bg-white text-#999 rounded-[50%] h-7 w-7 -m-3 border-[3px] border-slate-300 transition-[0.4s,ease] flex items-center justify-center fixed left-64"
+        >
+          2
+        </div>
+        <div
+          class="circle bg-white text-#999 rounded-[50%] h-7 w-7 -m-3 border-[3px] border-slate-300 transition-[0.4s,ease] flex items-center justify-center fixed left-2/3"
+        >
+          3
+        </div>
+        <div
+          class="circle bg-white text-#999 rounded-[50%] h-7 w-7 -m-3 border-[3px] border-slate-300 transition-[0.4s,ease] flex items-center justify-center fixed left-full"
+        >
+          4
+        </div>
+      </div>
+      <button
+        class="btnSecondary bg-blue-500 text-white text-[18px] border-solid border-4 border-gray-500 shadow-md font-medium rounded-md w-1/6 h-9 m-1 disabled:bg-gray-500 disabled:cursor-not-allowed"
+        id="prev"
+        disabled
+      >
+        Prev
+      </button>
+      <button
+        class="btnPrimary bg-blue-600 text-slate-50 text-[18px] border-solid border-4 shadow-md font-medium rounded-md w-1/6 h-9 m-1 active:scale-95 focus:outline-0 hover:bg-blue-700 border-blue-600"
+        id="next"
+      >
+        Next
+      </button>
+    </div>
+  </body>
+</html>
