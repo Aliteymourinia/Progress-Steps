@@ -42,18 +42,3 @@ prev.addEventListener("click", () => {
     disablePrev();
   }
 });
-// prev.addEventListener("click", () => {
-//   currentActive--;
-//   if (currentActive > 0) {
-//     prev.classList.add("active:scale-95");
-//     progress.style.width = pixelValues[currentActive] + "px";
-//   } else {
-//     prev.disabled = true;
-//     progress.style.width = "";
-//     prev.classList.remove("active:scale-95");
-//   }
-//   circles.forEach((circle, index) => {
-//     if (index > currentActive) {
-//       circle.style.borderColor = "";
-//     }
-//   });
