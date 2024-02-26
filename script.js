@@ -3,10 +3,16 @@ const next = document.querySelector("#next");
 const prev = document.querySelector("#prev");
 const circles = document.querySelectorAll(".circle");
 let currentActive = 0;
-const pixelValues = [20, 260, 580, 850];
 
 const updateProgress = () => {
-  progress.style.width = pixelValues[currentActive] + "px";
+  const progressWidth = getComputedStyle(
+    document.documentElement
+  ).getPropertyValue(
+    `--progress-width-${
+      ["small", "medium", "large", "extra-large"][currentActive]
+    }`
+  );
+  progress.style.width = progressWidth;
   circles.forEach((circle, index) => {
     circle.style.borderColor = index <= currentActive ? "#3B83F6" : "";
   });
