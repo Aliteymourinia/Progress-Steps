@@ -9,7 +9,7 @@ const updateProgress = () => {
     document.documentElement
   ).getPropertyValue(
     `--progress-width-${
-      ["small", "medium", "large", "extra-large"][currentActive]
+      ["stepOne", "stepTwo", "stepThree", "stepFour"][currentActive]
     }`
   );
   progress.style.width = progressWidth;

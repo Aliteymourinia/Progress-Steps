@@ -1,17 +1,17 @@
-@media (min-width: 1060px) {
+@media (min-width: 1050px) {
   :root {
-    --progress-width-small: 0px;
-    --progress-width-medium: 260px;
-    --progress-width-large: 560px;
-    --progress-width-extra-large: 860px;
+    --progress-width-stepOne: 0px;
+    --progress-width-stepTwo: 250px;
+    --progress-width-stepThree: 560px;
+    --progress-width-stepFour: 860px;
   }
 }
 
 @media (min-width: 1280px) {
   :root {
-    --progress-width-small: 0px;
-    --progress-width-medium: 260px;
-    --progress-width-large: 710px;
-    --progress-width-extra-large: 1060px;
+    --progress-width-stepOne: 0px;
+    --progress-width-stepTwo: 260px;
+    --progress-width-stepThree: 710px;
+    --progress-width-stepFour: 1060px;
   }
 }
