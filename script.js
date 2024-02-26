@@ -11,6 +11,7 @@ const updateProgress = () => {
     circle.style.borderColor = index <= currentActive ? "#3B83F6" : "";
   });
 };
+
 const enablePrev = () => {
   prev.disabled = false;
   prev.style.border = prev.style.borderStyle = "#3B83F6";
@@ -20,16 +21,26 @@ const disablePrev = () => {
   prev.disabled = true;
   prev.style.border = prev.style.borderStyle = "";
 };
+
+const scale = () => {
+  prev.classList.add("active:scale-95");
+};
+
 next.addEventListener("click", () => {
   currentActive++;
   enablePrev();
   updateProgress();
 });
+
 prev.addEventListener("click", () => {
   currentActive--;
-  index > currentActive ? enablePrev() : "";
-  updateProgress();
-  disablePrev();
+  if (0 < currentActive) {
+    updateProgress();
+    scale();
+  } else if (0 == currentActive) {
+    updateProgress();
+    disablePrev();
+  }
 });
 // prev.addEventListener("click", () => {
 //   currentActive--;
